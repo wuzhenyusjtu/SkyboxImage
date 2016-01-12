@@ -45,17 +45,7 @@ void CubeMap::init_cubemap(){
     glGenTextures(1, &cubemap_texture);
     glActiveTexture(GL_TEXTURE8);
     glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap_texture);
-    
-    /*
-     for (int i=rightHeight-1; i>=0; i--)
-     for (int j=0; j<rightWidth; j++)
-     {
-     std::cout << +_leftImage[i*rightWidth*4+j*4+0] << std::endl;
-     std::cout << +_frontImage[i*rightWidth*4+j*4+1] << std::endl;
-     std::cout << +_topImage[i*rightWidth*4+j*4+2] << std::endl;
-     }
-     */
-    
+
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_REPEAT);
